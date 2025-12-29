@@ -12,7 +12,7 @@ export default function PhotosPage() {
             </header>
             <section className="grid" style={{gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "1rem"}}>
                 {[1, 2, 3, 4, 5, 6].map((num) => (
-                    <div key={num} className="w-full aspect-square flex items-center justify-center p-4" onClick={() => router.push(`/photos/${num}`)}>
+                    <div key={num} className="w-full aspect-square flex items-center justify-center p-4" onClick={() => router.push(`/${num}`)}>
                         <img 
                             src={`/crystals-cleaning-pics/${num}.webp`}
                             alt={`Photo ${num}`}

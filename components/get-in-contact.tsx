@@ -51,7 +51,7 @@ function DrawerComponent({ children }: { children?: React.ReactNode }) {
                             </li>
                             <li>
                                 <a
-                                    href="/photos"
+                                    href="/gallery"
                                     className="flex items-center gap-4 p-4 bg-primary text-white rounded-lg shadow-md hover:bg-primary-dark transition"
                                 >
                                     <PictureInPicture className="w-6 h-6" />
