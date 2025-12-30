@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   output: "export",
   basePath: '/crystals-cleaning-painting',
   assetPrefix: '/crystals-cleaning-painting/',
+  trailingSlash: true,
   eslint: {
     ignoreDuringBuilds: true,
   },
