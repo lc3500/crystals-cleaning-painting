@@ -1,18 +1,7 @@
 import type { Metadata } from "next";
 import "./theme.css";
 import "./globals.css";
-import Header from "./header";
-import { ScrollArea } from "@/components/ui/scroll-area"
-
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
+import { lilitaOne, antero } from "./fonts";
 
 export const metadata: Metadata = {
   title: "Crystal's Cleaning and Painting",
@@ -24,7 +13,7 @@ export const metadata: Metadata = {
     siteName: "Crystal's Cleaning and Painting",
     images: [
       {
-        url: "https://crystals-cleaning-painting.vercel.app/og-image.jpg",
+        url: "/Logo.svg", // Replace with the relative path to your .svg icon
         width: 1200,
         height: 630,
         alt: "Crystal's Cleaning and Painting",
@@ -41,14 +30,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-      
-      >
-       
-        
-          {children}
-    
+    <html lang="en" className={`${lilitaOne.variable} ${antero.variable}`}>
+      <body>
+        {children}
       </body>
     </html>
   );

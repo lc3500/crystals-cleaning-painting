@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { Mail, Menu, Phone, PictureInPicture } from "lucide-react";
+import Link from "next/link";
 import navItems from "./nav-items";
 import Logo from "@/public/Logo.svg";
 import Image from "next/image";
@@ -45,8 +46,8 @@ function DrawerComponent() {
                     <section className="m-4 ">
                         <ul className="gap-6 flex flex-col text-xl">
                             <li>
-                                <a 
-                                    href="tel:1234567890" 
+                                <a
+                                    href="tel:1234567890"
                                     className="flex items-center gap-4 p-4 bg-primary text-white rounded-lg shadow-md hover:bg-primary-dark transition"
                                 >
                                     <Phone className="w-6 h-6" />
@@ -54,8 +55,8 @@ function DrawerComponent() {
                                 </a>
                             </li>
                             <li>
-                                <a 
-                                    href="mailto:crystal@example.com" 
+                                <a
+                                    href="mailto:crystal@example.com"
                                     className="flex items-center gap-4 p-4 bg-primary text-white rounded-lg shadow-md hover:bg-primary-dark transition"
                                 >
                                     <Mail className="w-6 h-6" />
@@ -63,13 +64,13 @@ function DrawerComponent() {
                                 </a>
                             </li>
                             <li>
-                                <a 
-                                    href="/gallery" 
+                                <Link
+                                    href="/gallery"
                                     className="flex items-center gap-4 p-4 bg-primary text-white rounded-lg shadow-md hover:bg-primary-dark transition"
                                 >
                                     <PictureInPicture className="w-6 h-6" />
                                     View Photos
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </section>
