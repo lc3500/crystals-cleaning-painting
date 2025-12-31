@@ -1,7 +1,7 @@
 import { Drawer, DrawerContent, DrawerDescription, DrawerFooter, DrawerHeader, DrawerTitle, DrawerTrigger } from "@/components/ui/drawer";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Phone, Mail, PictureInPicture, Menu } from "lucide-react";
-import { Button } from "./ui/button";
+import { Phone, Mail, PictureInPicture } from "lucide-react";
+import Link from "next/link";
 
 
 function DrawerComponent({ children }: { children?: React.ReactNode }) {
@@ -50,13 +50,13 @@ function DrawerComponent({ children }: { children?: React.ReactNode }) {
                                 </a>
                             </li>
                             <li>
-                                <a
+                                <Link
                                     href="/gallery"
                                     className="flex items-center gap-4 p-4 bg-primary text-white rounded-lg shadow-md hover:bg-primary-dark transition"
                                 >
                                     <PictureInPicture className="w-6 h-6" />
                                     View Photos
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </section>

@@ -1,22 +1,9 @@
 "use client";
-import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import Image from "next/image";
 import { Mail, Menu, Phone, PictureInPicture } from "lucide-react";
 import Link from "next/link";
-import navItems from "./nav-items";
-import Logo from "@/public/Logo.svg";
-import Image from "next/image";
-import {
-    Drawer,
-    DrawerClose,
-    DrawerContent,
-    DrawerDescription,
-    DrawerFooter,
-    DrawerHeader,
-    DrawerTitle,
-    DrawerTrigger,
-} from "@/components/ui/drawer";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Drawer, DrawerContent, DrawerDescription, DrawerFooter, DrawerHeader, DrawerTitle, DrawerTrigger } from "@/components/ui/drawer";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 function DrawerComponent() {
     return (
@@ -90,13 +77,16 @@ export default function Header() {
     return (
         <header className="w-[max-content] fixed h-[10%] bg-tertiary z-50 p-4 flex flex-row justify-start items-center rounded-b-lg shadow-lg m-4">
             <DrawerComponent />
-            <img
-                src="/Logo.svg"
-                width={100}
-                height={100}
-                alt="Crystal's Cleaning and Painting Logo"
-                className=""
-            />
+            <Link href="/">
+                <Image
+                    src="/Logo.svg"
+                    width={100}
+                    height={100}
+                    alt="Crystal's Cleaning and Painting Logo"
+                    className=""
+                    priority
+                />
+            </Link>
         </header>
     );
 }

@@ -1,9 +1,7 @@
 "use client";
-import Image from "next/image";
 import Header from "./header";
 import Landing from "../components/landing";
 import MeetThePainter from "@/components/meet-the-painter";
-import { Button } from "@/components/ui/button";
 import GetInContact from "@/components/get-in-contact";
 import LocationHero from "@/components/location-hero";
 

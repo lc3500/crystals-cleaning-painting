@@ -3,7 +3,7 @@
 export default function LocationHero() {
     return (
         <section className="w-screen h-[50vh] p-20 flex flex-row items-center justify-center gap-20 bg-primary text-white">
-            <h1 className="text-7xl">We're Local!</h1>
+            <h1 className="text-7xl">We&apos;re Local!</h1>
 
             <div className="flex flex-col">
                 <h2 className="text-5xl">Located in Marion, IN</h2>
