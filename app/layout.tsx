@@ -1,11 +1,19 @@
+
 import type { Metadata } from "next";
 import "./theme.css";
 import "./globals.css";
 import { lilitaOne, antero } from "./fonts";
+import PageTransition from "./page-transition";
+
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 export const metadata: Metadata = {
   title: "Crystal's Cleaning and Painting",
   description: "Professional cleaning, painting, and flooring services by Crystal McGuinn.",
+  icons: {
+    icon: `${basePath}/Logo.svg`,
+    shortcut: `${basePath}/Logo.svg`,
+  },
   openGraph: {
     title: "Crystal's Cleaning and Painting",
     description: "Professional cleaning, painting, and flooring services by Crystal McGuinn.",
@@ -32,7 +40,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${lilitaOne.variable} ${antero.variable}`}>
       <body>
-        {children}
+        <PageTransition>{children}</PageTransition>
       </body>
     </html>
   );

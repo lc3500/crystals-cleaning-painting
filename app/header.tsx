@@ -1,5 +1,8 @@
 "use client";
 import Image from "next/image";
+// Determine base path for images depending on environment
+const isProd = typeof process !== 'undefined' && process.env.NODE_ENV === "production";
+const basePath = isProd ? "/crystals-cleaning-painting" : "";
 import { Mail, Menu, Phone, PictureInPicture } from "lucide-react";
 import Link from "next/link";
 import { Drawer, DrawerContent, DrawerDescription, DrawerFooter, DrawerHeader, DrawerTitle, DrawerTrigger } from "@/components/ui/drawer";
@@ -79,7 +82,7 @@ export default function Header() {
             <DrawerComponent />
             <Link href="/">
                 <Image
-                    src="/crystals-cleaning-painting/Logo.svg"
+                    src={`${basePath}/Logo.svg`}
                     width={100}
                     height={100}
                     alt="Crystal's Cleaning and Painting Logo"

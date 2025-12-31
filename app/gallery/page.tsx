@@ -1,21 +1,32 @@
 "use client";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { ChevronLeft } from "lucide-react";
+// Determine base path for images depending on environment
+const isProd = typeof process !== 'undefined' && process.env.NODE_ENV === "production";
+const basePath = isProd ? "/crystals-cleaning-painting" : "";
 import { useRouter } from "next/navigation";
+import BackButton from "../[photoId]/back-button";
 
 export default function PhotosPage() {
     const router = useRouter();
     return (
-        <>
-            <header className="w-screen h-30 m-10">
-                <Button className="text-2xl py-10" onClick={() => router.back()}><ChevronLeft /> Back to Home</Button>
+        <div className="flex flex-col min-h-screen overflow-x-hidden px-2 sm:px-6 lg:px-20">
+            <header className="my-4 sm:my-10">
+               <BackButton />
             </header>
-            <section className="grid" style={{gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "1rem"}}>
+            <section
+                className="grid w-full gap-3 sm:gap-6"
+                style={{
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
+                }}
+            >
                 {[1, 2, 3, 4, 5, 6].map((num) => (
-                    <div key={num} className="w-full aspect-square flex items-center justify-center p-4" onClick={() => router.push(`/${num}`)}>
+                    <div
+                        key={num}
+                        className="aspect-square flex items-center justify-center p-2 sm:p-4"
+                        onClick={() => router.push(`/${num}`)}
+                    >
                         <Image
-                            src={`/crystals-cleaning-painting/${num}.webp`}
+                            src={`${basePath}/${num}.webp`}
                             alt={`Photo ${num}`}
                             className="w-full h-full object-cover rounded-lg shadow-lg"
                             width={600}
@@ -25,6 +36,6 @@ export default function PhotosPage() {
                     </div>
                 ))}
             </section>
-        </>
+        </div>
     );
 }

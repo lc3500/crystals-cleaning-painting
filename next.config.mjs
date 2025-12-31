@@ -8,4 +8,7 @@ export default {
   images: { unoptimized: true },
   basePath: isGitHub ? `/${repo}` : "",
   assetPrefix: isGitHub ? `/${repo}/` : undefined,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: isGitHub ? `/${repo}` : "",
+  },
 };
