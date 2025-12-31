@@ -4,6 +4,7 @@ import { Mail, Menu, Phone, PictureInPicture } from "lucide-react";
 import Link from "next/link";
 import { Drawer, DrawerContent, DrawerDescription, DrawerFooter, DrawerHeader, DrawerTitle, DrawerTrigger } from "@/components/ui/drawer";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import Logo from "@/public/Logo.svg";
 
 function DrawerComponent() {
     return (
@@ -79,12 +80,13 @@ export default function Header() {
             <DrawerComponent />
             <Link href="/">
                 <Image
-                    src="/Logo.svg"
+                    src="/crystals-cleaning-painting/Logo.svg"
                     width={100}
                     height={100}
                     alt="Crystal's Cleaning and Painting Logo"
                     className=""
                     priority
+                    unoptimized
                 />
             </Link>
         </header>

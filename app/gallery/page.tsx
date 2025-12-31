@@ -15,7 +15,7 @@ export default function PhotosPage() {
                 {[1, 2, 3, 4, 5, 6].map((num) => (
                     <div key={num} className="w-full aspect-square flex items-center justify-center p-4" onClick={() => router.push(`/${num}`)}>
                         <Image
-                            src={`/${num}.webp`}
+                            src={`/crystals-cleaning-painting/${num}.webp`}
                             alt={`Photo ${num}`}
                             className="w-full h-full object-cover rounded-lg shadow-lg"
                             width={600}
