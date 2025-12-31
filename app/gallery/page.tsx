@@ -14,9 +14,32 @@ export default function PhotosPage() {
                <BackButton />
             </header>
             <section
-                className="grid w-full gap-3 sm:gap-6"
+                className="w-full gap-3 sm:gap-6 hidden md:grid"
                 style={{
                     gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
+                }}
+            >
+                {[1, 2, 3, 4, 5, 6].map((num) => (
+                    <div
+                        key={num}
+                        className="aspect-square flex items-center justify-center p-2 sm:p-4"
+                        onClick={() => router.push(`/${num}`)}
+                    >
+                        <Image
+                            src={`${basePath}/${num}.webp`}
+                            alt={`Photo ${num}`}
+                            className="w-full h-full object-cover rounded-lg shadow-lg"
+                            width={600}
+                            height={600}
+                            unoptimized
+                        />
+                    </div>
+                ))}
+            </section>
+            <section
+                className="w-full gap-3 sm:gap-6 md:hidden grid"
+                style={{
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
                 }}
             >
                 {[1, 2, 3, 4, 5, 6].map((num) => (
