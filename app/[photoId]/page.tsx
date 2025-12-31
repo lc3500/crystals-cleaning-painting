@@ -28,7 +28,7 @@ export default async function PhotoDetailPage({
             </header>
             <section className="flex-1 flex items-center justify-center p-4 overflow-hidden">
                 <Image
-                    src={`/crystals-cleaning-pics/${photoId}.webp`}
+                    src={`/${photoId}.webp`}
                     alt={`Photo ${photoId}`}
                     className="rounded-lg shadow-lg max-h-full max-w-full"
                     width={800}
