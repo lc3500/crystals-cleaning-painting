@@ -4,7 +4,6 @@ import { Mail, Menu, Phone, PictureInPicture } from "lucide-react";
 import Link from "next/link";
 import { Drawer, DrawerContent, DrawerDescription, DrawerFooter, DrawerHeader, DrawerTitle, DrawerTrigger } from "@/components/ui/drawer";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import Logo from "@/public/Logo.svg";
 
 function DrawerComponent() {
     return (
