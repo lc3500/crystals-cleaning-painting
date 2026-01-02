@@ -16,7 +16,7 @@ export default function MeetThePainter() {
                     unoptimized
                 />
                 <p className="text-base sm:text-xl p-2 sm:p-4 text-center sm:text-left">
-                    Crystal is a professional painter with over 10 years of experience in
+                    Crystal is a professional painter with over 30 years of experience in
                     the industry. She has a passion for transforming spaces and takes
                     pride in her attention to detail.
                 </p>
