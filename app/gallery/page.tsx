@@ -1,8 +1,5 @@
 "use client";
 import Image from "next/image";
-// Determine base path for images depending on environment
-const isProd = typeof process !== 'undefined' && process.env.NODE_ENV === "production";
-const basePath = isProd ? "/crystals-cleaning-painting" : "";
 import { useRouter } from "next/navigation";
 import BackButton from "../[photoId]/back-button";
 
@@ -26,7 +23,7 @@ export default function PhotosPage() {
                         onClick={() => router.push(`/${num}`)}
                     >
                         <Image
-                            src={`${basePath}/${num}.webp`}
+                            src={`/${num}.webp`}
                             alt={`Photo ${num}`}
                             className="w-full h-full object-cover rounded-lg shadow-lg"
                             width={600}
@@ -49,7 +46,7 @@ export default function PhotosPage() {
                         onClick={() => router.push(`/${num}`)}
                     >
                         <Image
-                            src={`${basePath}/${num}.webp`}
+                            src={`/${num}.webp`}
                             alt={`Photo ${num}`}
                             className="w-full h-full object-cover rounded-lg shadow-lg"
                             width={600}

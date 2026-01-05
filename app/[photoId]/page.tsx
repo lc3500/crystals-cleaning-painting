@@ -4,10 +4,6 @@ import BackButton from "./back-button";
 import fs from "fs";
 import path from "path";
 
-// Determine base path for images depending on environment
-const isProd = process.env.NODE_ENV === "production";
-const basePath = isProd ? "/crystals-cleaning-painting" : "";
-
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
@@ -28,7 +24,7 @@ export default async function PhotoDetailPage({
     return (
         <section
             className="h-screen overflow-hidden flex flex-col bg-center bg-contain bg-no-repeat"
-            style={{ backgroundImage: `url(${basePath}/${photoId}.webp)` }}
+            style={{ backgroundImage: `url(/${photoId}.webp)` }}
         >
             <header className="w-screen h-30 m-10">
                 <BackButton />
