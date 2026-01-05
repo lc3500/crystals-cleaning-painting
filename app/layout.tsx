@@ -6,13 +6,14 @@ import { lilitaOne, antero } from "./fonts";
 import PageTransition from "./page-transition";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+const logoPath = `${basePath}/Logo.svg`;
 
 export const metadata: Metadata = {
   title: "Crystal's Cleaning and Painting",
   description: "Professional cleaning, painting, and flooring services by Crystal McGuinn.",
   icons: {
-    icon: `${basePath}/Logo.svg`,
-    shortcut: `${basePath}/Logo.svg`,
+    icon: logoPath,
+    shortcut: logoPath,
   },
   openGraph: {
     title: "Crystal's Cleaning and Painting",
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "Crystal's Cleaning and Painting",
     images: [
       {
-        url: "/Logo.svg", // Replace with the relative path to your .svg icon
+        url: logoPath,
         width: 1200,
         height: 630,
         alt: "Crystal's Cleaning and Painting",

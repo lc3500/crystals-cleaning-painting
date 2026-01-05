@@ -1,12 +1,12 @@
 "use client";
+
 import Image from "next/image";
-// Determine base path for images depending on environment
-const isProd = typeof process !== 'undefined' && process.env.NODE_ENV === "production";
-const basePath = isProd ? "/crystals-cleaning-painting" : "";
 import { Mail, Menu, Phone, PictureInPicture } from "lucide-react";
 import Link from "next/link";
 import { Drawer, DrawerContent, DrawerDescription, DrawerFooter, DrawerHeader, DrawerTitle, DrawerTrigger } from "@/components/ui/drawer";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 function DrawerComponent() {
     return (
