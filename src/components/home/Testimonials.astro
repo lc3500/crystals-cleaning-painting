@@ -1,25 +1,25 @@
 ---
 const testimonials = [
   {
-    name: 'Rebecca Hayes',
-    description: 'Designer',
+    name: 'Sarah Johnson',
+    description: 'Homeowner',
     image: '/assets/testimonial-1.webp',
     message:
-      '“Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis.”',
+      '"Crystal did an amazing job painting our living room and kitchen. Her attention to detail was incredible, and she was professional throughout the entire project. Highly recommend!"',
   },
   {
-    name: 'Rosa Spencer',
-    description: 'Team Leader',
+    name: 'Mike Patterson',
+    description: 'Business Owner',
     image: '/assets/testimonial-2.webp',
     message:
-      '“Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis.”',
+      '"We hired Crystal for a complete office cleaning and painting refresh. The results exceeded our expectations. She is reliable, skilled, and takes pride in her work."',
   },
   {
-    name: 'Christina Upton',
-    description: 'Manager',
+    name: 'Jennifer Davis',
+    description: 'Marion Resident',
     image: '/assets/testimonial-3.webp',
     message:
-      '“Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis.”',
+      '"After 30 years in business, Crystal knows her craft inside and out. The flooring installation she did in our home looks beautiful, and her cleaning service is top-notch."',
   },
 ];
 ---
@@ -28,18 +28,18 @@ const testimonials = [
   <div class="v mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
     <div class="flex flex-col items-center gap-12 lg:gap-20">
       <h2 class="mx-auto max-w-xl text-center text-3xl font-medium tracking-tight sm:text-4xl">
-        Trusted by the largest companies in the world
+        What Our Clients Say
       </h2>
       <div
-        class="divide-primary-900/10 dark:divide-primary-300/10 grid divide-y lg:grid-cols-3 lg:divide-x lg:divide-y-0"
+        class="divide-md-outline-variant grid divide-y lg:grid-cols-3 lg:divide-x lg:divide-y-0"
       >
         {
           testimonials.map((testimonial) => (
             <figure class="mx-auto flex max-w-lg flex-col items-center gap-6 py-8 lg:px-8 lg:py-0">
               <div class="flex flex-row gap-2">
-                {[...Array(3)].map(() => (
+                {[...Array(5)].map(() => (
                   <svg
-                    class="text-primary-600 dark:text-primary-400 h-6 w-6"
+                    class="text-md-tertiary h-6 w-6"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
@@ -49,14 +49,14 @@ const testimonials = [
                   </svg>
                 ))}
               </div>
-              <blockquote class="text-primary-950/70 dark:text-primary-200/70 text-center text-lg italic leading-loose">
+              <blockquote class="text-md-on-surface-variant text-center text-lg italic leading-loose">
                 <p>{testimonial.message}</p>
               </blockquote>
               <figcaption class="flex flex-col gap-4">
                 <img class="mx-auto h-8 w-8 rounded-full" src={testimonial.image} alt="" />
                 <div class="text-center">
                   <div class="text-base font-medium">{testimonial.name}</div>
-                  <div class="text-primary-950/70 dark:text-primary-200/70 text-sm">
+                  <div class="text-md-on-surface-variant text-sm">
                     {testimonial.description}
                   </div>
                 </div>

@@ -1,9 +1,12 @@
 ---
-import '@fontsource/inter/latin-400.css';
-import '@fontsource/inter/latin-500.css';
+import '@fontsource/dm-serif-display';
+import '@fontsource/roboto-condensed/400.css';
+import '@fontsource/roboto-condensed/700.css';
 import { ViewTransitions } from 'astro:transitions';
 import Footer from '../components/layout/Footer.astro';
 import Header from '../components/layout/Header.astro';
+import '../css/light.css';
+import '../css/dark.css';
 
 interface Props {
   description: string;
@@ -14,7 +17,7 @@ const { description, title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en" x-cloak x-data :class="{ 'dark': $store.theme.isDark }">
+<html lang="en" x-cloak x-data>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -24,13 +27,17 @@ const { description, title } = Astro.props;
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
     <title>{title}</title>
     <ViewTransitions />
   </head>
   <body
-    class="bg-primary-50 text-primary-950 dark:bg-primary-950 dark:text-primary-200 antialiased transition"
+    :class="$store.theme.isDark ? 'dark' : 'light'"
+    class="bg-md-background text-md-on-background antialiased transition"
   >
-    <Header />
+    <Header client:load />
     <main>
       <slot />
     </main>
@@ -39,6 +46,11 @@ const { description, title } = Astro.props;
       [x-cloak] {
         display: none !important;
       }
+      
+      /* Apply DM Serif Display to headings */
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'DM Serif Display', serif;
+      }
     </style>
     <script>
       import Alpine from 'alpinejs';
@@ -46,28 +58,28 @@ const { description, title } = Astro.props;
 
       Alpine.plugin(collapse);
 
+      type ThemeStore = {
+        isDark: boolean;
+        toggle: () => void;
+      };
+
       Alpine.store('theme', {
-        init() {
-          this.isDark = (() => {
-            if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-              return localStorage.getItem('theme') === 'dark';
-            }
-            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-              return true;
-            }
-            return false;
-          })();
-        },
-
-        isDark: false,
-
-        toggle() {
+        isDark: (() => {
+          if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+            return localStorage.getItem('theme') === 'dark';
+          }
+          if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            return true;
+          }
+          return false;
+        })(),
+        toggle(this: ThemeStore) {
           this.isDark = !this.isDark;
           localStorage.setItem('theme', this.isDark ? 'dark' : 'light');
-        },
-      });
+        }
+      } as ThemeStore);
 
-      window.Alpine = Alpine;
+      (window as any).Alpine = Alpine;
       Alpine.start();
     </script>
   </body>

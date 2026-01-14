@@ -3,29 +3,29 @@ const values = [
   [
     {
       ref: '01',
-      name: 'Excellence',
+      name: 'Quality Craftsmanship',
       description:
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+        'Every project, whether big or small, receives the same level of meticulous attention to detail. We take pride in delivering flawless results that stand the test of time, using only the highest quality materials and proven techniques.',
     },
     {
       ref: '02',
-      name: 'Innovation',
+      name: 'Customer First',
       description:
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+        'Your satisfaction is our top priority. We listen to your needs, respect your space, and work diligently to bring your vision to life. Clear communication and personalized service are at the heart of everything we do.',
     },
   ],
   [
     {
       ref: '03',
-      name: 'Teamwork',
+      name: 'Local & Reliable',
       description:
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+        'Based in Marion, IN, we\'re part of your community. We understand local needs and take pride in serving our neighbors with dependable, professional service. When you call Crystal\'s Cleaning and Painting, you can count on us to show up on time and get the job done right.',
     },
     {
       ref: '04',
-      name: 'Respect',
+      name: 'Experience & Expertise',
       description:
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+        'With over 30 years in the industry, Crystal brings unmatched knowledge and skill to every project. This wealth of experience means we can handle any challenge and deliver results that exceed expectations.',
     },
   ],
 ];
@@ -40,11 +40,11 @@ const values = [
           values.map((column, index) => (
             <div class:list={['space-y-8', index === 1 && 'lg:mt-16']}>
               {column.map((value) => (
-                <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-12 rounded-3xl px-6 py-8">
+                <div class="bg-md-surface-container flex flex-col gap-12 rounded-3xl px-6 py-8">
                   <p class="text-sm">{value.ref}</p>
                   <div class="flex flex-col gap-4">
                     <h3 class="text-xl font-medium">{value.name}</h3>
-                    <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
+                    <p class="text-md-on-surface-variant text-base sm:text-lg">
                       {value.description}
                     </p>
                   </div>
