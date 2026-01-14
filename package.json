@@ -16,22 +16,22 @@
     "@fontsource/dm-serif-display": "^5.2.8",
     "@fontsource/inter": "5.0.8",
     "@fontsource/roboto-condensed": "^5.2.8",
-    "@playform/compress": "^0.2.0",
+    "@playform/compress": "^0.2.1",
     "@types/alpinejs": "3.7.2",
-    "@types/react-dom": "^19.0.0",
+    "@types/react-dom": "^19.2.3",
     "alpinejs": "3.12.3",
     "astro": "2.10.13",
-    "astro-compress": "^2.3.8",
+    "astro-compress": "^2.3.9",
     "lucide-react": "^0.562.0",
-    "motion": "^12.24.7",
+    "motion": "^12.26.2",
     "prettier": "3.0.2",
     "prettier-plugin-astro": "0.12.0",
     "prettier-plugin-tailwindcss": "0.5.3",
     "react": "^19.2.3",
-    "react-dom": "^19.0.0",
+    "react-dom": "^19.2.3",
     "tailwindcss": "3.3.3"
   },
   "devDependencies": {
-    "@types/react": "^19.0.0"
+    "@types/react": "^19.2.8"
   }
 }

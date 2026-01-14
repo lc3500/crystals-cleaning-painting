@@ -37,7 +37,7 @@ const { description, title } = Astro.props;
     :class="$store.theme.isDark ? 'dark' : 'light'"
     class="bg-md-background text-md-on-background antialiased transition"
   >
-    <Header client:load />
+    <Header />
     <main>
       <slot />
     </main>
