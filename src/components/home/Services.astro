@@ -12,12 +12,6 @@ const services = [
     description:
       'Thorough cleaning services for homes and businesses. We leave your space spotless and refreshed, tackling even the toughest cleaning challenges.',
   },
-  {
-    step: '03',
-    name: 'Flooring Installation',
-    description:
-      'Professional flooring installation and refinishing services. From hardwood to tile, we ensure beautiful, durable results that enhance your space.',
-  },
 ];
 ---
 
@@ -25,7 +19,7 @@ const services = [
   <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
     <div class="flex flex-col gap-12 sm:gap-16">
       <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Services</h2>
-      <div class="grid gap-8 lg:grid-cols-3">
+      <div class="grid gap-8 lg:grid-cols-2">
         {
           services.map((service) => (
             <div class="bg-md-surface-container flex flex-col gap-12 rounded-3xl px-6 py-8">
